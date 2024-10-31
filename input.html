@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <!-- TAILWIND LINK -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LINK FOR MULTI SELECT -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/css/multi-select-tag.css">
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.1.0/dist/js/multi-select-tag.js"></script>
+
+    <!-- LINK FOR TEXT EDITOR -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 min-h-screen text-white">
+    <nav class="text-white border-b border-gray-700 bg-gray-800 z-30 fixed top-0 left-0 right-0">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="self-center text-2xl font-bold">Nofi</span>
+            </a>
+            <div class="text-2xl font-semibold">Student Form</div>
+        </div>
+    </nav>
+
+    <div class="flex w-full">
+        <div class="bg-gray-800 w-1/5 h-screen pt-24 border-r border-gray-700 fixed top-0 left-0">
+            <ul class="text-lg font-medium text-gray-300 px-6 space-y-4">
+                <li><a href="#general-info" class="hover:text-blue-400">General Info</a></li>
+                <li><a href="#academics" class="hover:text-blue-400">Academics</a></li>
+                <li><a href="#login-credentials" class="hover:text-blue-400">Login Credentials</a></li>
+                <li><a href="#personal-preferences" class="hover:text-blue-400">Personal Preferences</a></li>
+                <li><a href="#additional-info" class="hover:text-blue-400">Additional Info</a></li>
+                <li><a href="#submission" class="hover:text-blue-400">Submission</a></li>
+            </ul>
+        </div>
+
+        <main class="relative ml-1/5 w-4/5 py-20 px-10 ml-72">
+            <img src="./Images/image.png" alt="student image" class="my-5">
+            <form class="space-y-12" id="form">
+                <section id="general-info"
+                    class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">General Info
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="fname" class="block text-sm mb-1">First Name</label>
+                                <input type="text" id="fname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="lname" class="block text-sm mb-1">Last Name</label>
+                                <input type="text" id="lname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="ffname" class="block text-sm mb-1">Father's First Name</label>
+                                <input type="text" id="ffname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="flname" class="block text-sm mb-1">Father's Last Name</label>
+                                <input type="text" id="flname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="email" class="block text-sm mb-1">Email</label>
+                                <input type="email" id="email"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="phone" class="block text-sm mb-1">Phone</label>
+                                <input type="tel" id="phone"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="address" class="block text-sm mb-1">Address</label>
+                                <textarea id="address" rows="4"
+                                    class="border h-24 border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs max-h-24"
+                                    required></textarea>
+                            </div>
+                            <div class="w-1/2 flex flex-col items-center justify-center">
+                                <label for="profile-pic" class="text-lg mb-4">Profile Picture</label>
+                                <img id="profile-display" src="./Images/pp.png" alt="Profile Picture"
+                                    class="rounded-full w-36 h-36 object-cover border-3 border-blue-500">
+                                <input type="file" id="profile-pic" class="text-white mt-4 cursor-pointer"
+                                    accept="image/">
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="dob" class="block text-sm mb-1">Date of Birth</label>
+                                <input type="date" id="dob"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label class="block text-sm mb-1">Gender</label>
+                                <div class="space-x-4 mt-2 flex flex-col w-full items-center">
+                                    <div>
+                                        <input type="radio" id="male" name="gender" value="male"
+                                            class="hover:bg-gray-600">
+                                        <label for="male" class="text-xl">Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="female" name="gender" value="female"
+                                            class="hover:bg-gray-600">
+                                        <label for="female" class="text-xl">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="province" class="block text-sm mb-1">Province</label>
+                                <select id="province"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                                    <option value="select country">Select Province</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Sindh">Sindh</option>
+                                    <option value="Balochistan">Balochistan</option>
+                                    <option value="Khyber Pakhtun Khawa">Khyber Pakhtun Khawa</option>
+                                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                                    <option value="Gilgit Baltistan">Gilgit Baltistan</option>
+                                </select>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="city" class="block text-sm mb-1">City</label>
+                                <select id="city"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                                    <option value="select state">Select City</option>
+                                    <option value="select state">Lahore</option>
+                                    <option value="select state">Mianwali</option>
+                                    <option value="select state">Multan</option>
+                                    <option value="select state">Karachi</option>
+                                    <option value="select state">Hydrebad</option>
+                                    <option value="select state">Faislabad</option>
+                                    <option value="select state">Peshawar</option>
+                                    <option value="select state">Islamabad</option>
+                                    <option value="select state">Quetta</option>
+                                    <option value="select state">Bhawalpur</option>
+                                    <option value="select state">Pakpattan</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="academics"
+                    class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Academics
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="university" class="block text-sm mb-1">University</label>
+                                <select id="university"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                                    <option value="0">Select University</option>
+                                    <option value="University of Lahore">University Of Lahore</option>
+                                    <option value="University of SouthAsia">University of SouthAsia</option>
+                                    <option value="FAST">FAST</option>
+                                    <option value="Comsats University Islamabad">Comsats University Islamabad</option>
+                                    <option value="Punjab University">Punjab University</option>
+                                    <option value="University of Central Punjab">University of Central Punjab</option>
+                                    <option value="Education University">Education University</option>
+                                    <option value="Lahore Garrison University">Lahore Garrison University</option>
+                                </select>
+                            </div>
+                            <div class="w-1/2 text-black">
+                                <label for="courses" class="text-white">Courses</label>
+                                <select id="courses" multiple="multiple">
+                                    <option value="Mathematics">Mathematics</option>
+                                    <option value="Physics">Physics</option>
+                                    <option value="Chemistry">Chemistry</option>
+                                    <option value="Biology">Biology</option>
+                                    <option value="Computer-Science">Computer Science</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <p class="block text-sm mb-1">Roll Number</p>
+                                <input type="text" disabled id="roll"
+                                    class="border border-gray-500 rounded-lg h-12 bg-gray-700 w-full px-4 py-2.5 text-white text-lg inputs">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="gpa" class="block text-sm mb-1">GPA</label>
+                                <input type="number" id="gpa"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="login-credentials"
+                    class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Login
+                        Credentials</h2>
+                    <div class="space-y-6">
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="username" class="block text-sm mb-1">Username</label>
+                                <input type="text" id="username"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="password" class="block text-sm mb-1">Password</label>
+                                <input type="password" id="password"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="personal-preferences"
+                    class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Personal
+                        Preferences</h2>
+                    <div class="space-y-6">
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="Website" class="block text-sm mb-1">Portfolio link</label>
+                                <input type="url" id="portfolio"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="color" class="block text-sm mb-1">Favorite color</label>
+                                <input type="color" id="color"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs h-12 inputs"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <div class="space-y-2 flex flex-col text-black">
+                                    <label for="interests" class="text-white">Interests</label>
+                                    <select name="interests" id="interests"
+                                        class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 h-12"
+                                        multiple="multiple">
+                                        <option value="Sports">Sports</option>
+                                        <option value="Reading">Reading</option>
+                                        <option value="Traveling">Traveling</option>
+                                        <option value="Music">Music</option>
+                                        <option value="Gaming">Gaming</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="additional-info"
+                    class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                    <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Additional
+                        Info</h2>
+                    <div class="space-y-6">
+                        <div class="flex space-x-6">
+                            <div class="w-1/2">
+                                <label for="emergency-contact" class="block text-sm mb-1">Emergency Contact</label>
+                                <input type="tel" id="emergency-contact"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                            <div class="w-1/2">
+                                <label for="school-name" class="block text-sm mb-1">Previous School Name</label>
+                                <input type="text" id="school-name"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="flex space-x-6">
+                            <div class="w-full">
+                                <label for="comments" class="block text-sm mb-1">Comments</label>
+                                <div id="comments"
+                                    class="border h-24 border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white hover:bg-gray-600 focus:border-blue-400 focus:ring focus:ring-blue-300 inputs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-20">
+                            <input type="checkbox" id="Hotel" class="inputs" value="Hotel Residency">
+                            <label for="Hotel">Hotel Residency</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="submission"
+                    class="bg-gray-800 p-8 flex space-x-2 rounded-lg shadow-lg text-white text-2xl">
+                    <button type="submit" id="submit"
+                        class="w-1/2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg">Submit</button>
+                    <button type="reset"
+                        class="w-1/2 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg">Reset</button>
+                </section>
+            </form>
+        </main>
+    </div>
+</body>
+
+<script>
+    let coursesinputsobject;
+    let interestsinputobject;
+
+    window.addEventListener('DOMContentLoaded', () => {
+        coursesinputsobject = new MultiSelectTag('courses', {
+            rounded: true,
+            shadow: true,
+        });
+
+        interestsinputobject = new MultiSelectTag('interests', {
+            rounded: true,
+            shadow: true,
+        })
+
+        const multiSelectTag = document.querySelectorAll(".body");
+        multiSelectTag.forEach(element => {
+            element.style = `background-color:#374151;
+                  width: 97%;
+                  height:3rem;
+                  border-color: #6b7280;`;
+
+        });
+    });
+    // object for using text editor                      
+    const quill = new Quill('#comments', {
+        theme: 'snow'
+    })
+
+    const rollNum = document.getElementById("roll");
+    if(!rollNum.innerText){
+        rollNum.value = Math.floor(Math.random()*(999-100+1)*10000);
+    }
+</script>
+
+<script src="./js/input.js"></script>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student View Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 min-h-screen text-white">
+    <nav class="text-white border-b border-gray-700 bg-gray-800 z-30 fixed top-0 left-0 right-0">
+        <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="self-center text-2xl font-bold">Nofi</span>
+            </a>
+            <div class="text-2xl font-semibold">View Page</div>
+        </div>
+    </nav>
+
+    <div class="flex w-full">
+        <div class="bg-gray-800 w-1/5 h-screen pt-24 border-r border-gray-700 fixed top-0 left-0">
+            <ul class="text-lg font-medium text-gray-300 px-6 space-y-4">
+                <li><a href="#general-info" class="hover:text-blue-400">General Info</a></li>
+                <li><a href="#academics" class="hover:text-blue-400">Academics</a></li>
+                <li><a href="#login-credentials" class="hover:text-blue-400">Login Credentials</a></li>
+                <li><a href="#personal-preferences" class="hover:text-blue-400">Personal Preferences</a></li>
+                <li><a href="#additional-info" class="hover:text-blue-400">Additional Info</a></li>
+            </ul>
+        </div>
+
+        <main class="relative space-y-12 ml-1/5 w-4/5 py-20 px-10 ml-72">
+            <img src="./Images/sports.png" alt="student image" class="w-full my-5">
+            <section id="general-info"
+                class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">General Info
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex space-x-6">
+                        <div class="w-1/2 flex flex-col items-center justify-center">
+                            <h4 class="text-lg mb-4">Profile Picture</h4>
+                            <img id="picture" src="./Images/pp.png" alt="Profile Picture"
+                                class="w-52 h-52 object-cover border-3 border-blue-500">
+                        </div>
+                        <div class="w-1/2 flex flex-col justify-evenly">
+                            <div class="w-full">
+                                <h4 class="block text-sm mb-1">First Name</h4>
+                                <p id="fname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white "></p>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="block text-sm mb-1">Last Name</h4>
+                                <p id="lname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                            <div class="w-full">
+                                <h4 class="block text-sm mb-1">Father's First Name</h4>
+                                <p id="ffname"
+                                    class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                            </div>
+                            <div class="w-full">
+                                <h4 class="block text-sm mb-1">Father's Last Name</h4>
+                                <p id="flname" class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Email</h4>
+                            <p id="email"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white "></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Phone</h4>
+                            <p type="tel" id="phone"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-full">
+                            <h4 for="address" class="block text-sm mb-1">Address</h4>
+                            <p id="address"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 for="dob" class="block text-sm mb-1">Date of Birth</h4>
+                            <p id="dob"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Gender</h4>
+                            <p id="gender"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Province</h4>
+                            <p id="province"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">City</h4>
+                            <p id="city"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="academics"
+                class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Academics
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">University</h4>
+                            <p id="university"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 for="course" class="block text-sm mb-1">Course</h4>
+                            <p id="courses"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <p for="roll" class="block text-sm mb-1">Roll Number</p>
+                            <p id="roll"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-2.5 text-white text-lg"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">GPA</h4>
+                            <p id="gpa"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="login-credentials"
+                class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Login
+                    Credentials</h2>
+                <div class="space-y-6">
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Username</h4>
+                            <p id="username"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 for="password" class="block text-sm mb-1">Password</h4>
+                            <p id="password"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="personal-preferences"
+                class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Personal
+                    Preferences</h2>
+                <div class="space-y-6">
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Website</h4>
+                            <p id="portfolio"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Favorite color</h4>
+                            <p id="color"
+                                class="border h-12 border-gray-500 rounded-lg w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <p class="block text-sm mb-1">Interests</p>
+                            <p id="interests"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="additional-info"
+                class="bg-gray-800 p-8 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all duration-300 ease-in-out">
+                <h2 class="bg-blue-500 text-white text-2xl font-bold text-center py-4 mb-6 rounded-lg">Additional
+                    Info</h2>
+                <div class="space-y-6">
+                    <div class="flex space-x-6">
+                        <div class="w-1/2">
+                            <h4 class="block text-sm mb-1">Emergency Contact</h4>
+                            <p id="emergency-contact"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                        <div class="w-1/2">
+                            <h4 for="school-name" class="block text-sm mb-1">Previous School Name</h4>
+                            <p id="school-name"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="w-full">
+                            <h4 for="comments" class="block text-sm mb-1">Comments</h4>
+                            <p id="comments"
+                                class="border border-gray-500 rounded-lg bg-gray-700 w-full px-4 py-3 text-white"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Hotel Residency</h4>
+                        <p id="Hotel" class="border border-gray-500 rounded-lg bg-gray-700 w-1/2 px-4 py-3 text-white"></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/view.js"></script>
+</body>
+</html>
